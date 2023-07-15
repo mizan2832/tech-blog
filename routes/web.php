@@ -25,5 +25,5 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::get('/admin',function(){
-    return view('backend.pages.index');
+    return view('backend.pages.index ');
 })->middleware(['auth','role:admin'])->name('admin.index');
