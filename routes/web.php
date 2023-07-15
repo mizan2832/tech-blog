@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +16,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('backend.pages.index');
+    return view('front.pages.index');
 });
-
 
 Auth::routes();
 
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/admin',function(){
-    return view('backend.pages.index ');
+    return view('backend.pages.index');
 })->middleware(['auth','role:admin'])->name('admin.index');
+
+Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group(function() {
+    Route::get('category', [CategoryController::class,'index'])->name('category.index');
+});
+
+
+

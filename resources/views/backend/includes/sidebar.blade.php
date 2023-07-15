@@ -16,7 +16,7 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="">
+                <a class="sidebar-link" href="{{ route('admin.category.index') }}">
                <i class="align-middle" data-feather="square"></i> <span class="align-middle">Categories</span> </a>
             </li>
 
@@ -37,7 +37,7 @@
     </a>
             </li>
 
-            
+
         </ul>
 
     </div>
