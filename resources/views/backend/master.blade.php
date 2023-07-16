@@ -7,11 +7,17 @@
 <body>
 	<div class="wrapper">
 
+
 		@include('backend.includes.sidebar')
 
-		@yield('content')
+        <div class="main">
+            @include('backend.includes.master_nav')
+            @yield('content')
+        </div>
+
 	</div>
 
+       @include('backend.includes.footer')
 	<script src="{{ asset('backend/js/app.js') }} "></script>
 
 	<script>
