@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('title','Category')
+@section('title','Tag')
 @push('css')
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         <div class="row ">
             <div class="col-sm-6">
                  <div class="card">
-                    <h2 class="text-center">Categories</h2>
+                    <h2 class="text-center">Tags</h2>
                     <table class="table table-striped">
                     <thead>
                     <tr>
@@ -36,7 +36,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
             <div class="col-sm-4">
                 <div class="card p-3">
-                    <h2 class="text-center">Add Category</h2>
+                    <h2 class="text-center">Add Tag</h2>
                     <form action="/action_page.php">
                             <div class="mb-3 mt-3">
                               <input type="name" class="form-control" id="name" placeholder="Enter Category Name" name="name">

@@ -19,7 +19,7 @@
 
        @include('backend.includes.footer')
 	<script src="{{ asset('backend/js/app.js') }} "></script>
-
+{{-- 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
 			var ctx = document.getElementById("chartjs-dashboard-line").getContext("2d");
@@ -240,7 +240,7 @@
 				defaultDate: defaultDate
 			});
 		});
-	</script>
+	</script> --}}
 
 </body>
 

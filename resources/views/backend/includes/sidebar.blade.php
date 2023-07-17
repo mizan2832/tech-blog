@@ -21,7 +21,7 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-forms.html">
+                <a class="sidebar-link" href="{{ route('admin.tag.index') }}">
       <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Tags</span>
     </a>
             </li>
