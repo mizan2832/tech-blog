@@ -22,7 +22,9 @@
                         <td>John</td>
                         <td>Doe</td>
                         <td>john@example.com</td>
-                        <td><span> <i class="fa-sharp fa-solid fa-pen-to-square"></i></span> </td>
+                        <td><span> <a href="">
+                                <i class="fas fa-edit"></i>
+                              </a>  </td>
                 </tr>
                 <tr>
                         <td>Mary</td>
