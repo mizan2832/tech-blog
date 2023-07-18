@@ -40,17 +40,20 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                     </tr>
                     </thead>
                     <tbody>
+                        @php
+                            $i = 1;
+                        @endphp
                         @foreach ($categories as $category)
                             <tr>
-                                <td></td>
+                                <td>{{ $i++ }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
-                                <td> </td>
-                                <td> <a href="{{ route('admin.category.edit',$category->id)}}"><i class="fa-solid fa-pen-to-square"></i></a> /
+                                <td>
+                                     <a href="{{ route('admin.category.edit',$category->id)}}"><i class="fa-solid fa-pen-to-square"></i></a> /
 
-                                    <form id="delete-form-{{ $category->id }}" method="post" action="" style="display: none">
-                                        {{ csrf_field() }}
-                                        {{ method_field('DELETE') }}
+                                    <form id="delete-form-{{ $category->id }}" method="POST" action="{{ route('admin.category.destroy',$category->id)}}" style="display: none">
+                                        @csrf
+                                        @method('DELETE')
                                     </form>
                                     <a href="" onclick="
                                         if(confirm('Are you sure, You Want to delete this?'))
@@ -60,7 +63,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                                         }
                                         else{
                                         event.preventDefault();
-                                        }" ><i class="fa-solid fa-trash-can "></i></a></td>
+                                        }" ><i class="fa-solid fa-trash-can "></i>
+
+                                    </a>
+
+                                    </td>
                             </tr>
                         @endforeach
                     </tbody>
