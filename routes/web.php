@@ -31,6 +31,7 @@ Route::get('/admin',function(){
 Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group(function() {
     Route::get('category', [CategoryController::class,'index'])->name('category.index');
     Route::get('tag', [TagController::class,'index'])->name('tag.index');
+    Route::post('category/create', [CategoryController::class,'create'])->name('category.create');
 });
 
 
