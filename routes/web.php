@@ -32,6 +32,11 @@ Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group
     Route::get('category', [CategoryController::class,'index'])->name('category.index');
     Route::get('tag', [TagController::class,'index'])->name('tag.index');
     Route::post('category/create', [CategoryController::class,'create'])->name('category.create');
+    Route::get('category/edit/{id}', [CategoryController::class,'edit'])->name('category.edit');
+    Route::put('category/update/{id}', [CategoryController::class,'update'])->name('category.update');
+
+
+
 });
 
 

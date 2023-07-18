@@ -69,16 +69,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
             <div class="col-sm-4">
                 <div class="card p-3">
-                    <h2 class="text-center">Add Category</h2>
-                    <form action="{{ route('admin.category.create') }}" method="POST">
+                    <h2 class="text-center">Update Category <span class="align-right"><a href="{{ route('admin.category.index') }}" class="btn btn-primary">ADD</a></span></h2>
+                    <form action="{{ route('admin.category.update',$category->id)}} }}" method="POST">
                         {{ csrf_field() }}
+                        @method('PUT')
                             <div class="mb-3 mt-3">
                               <label for="Cateogry" class="">Cateogry:</label>
-                              <input type="name" class="form-control" id="name" placeholder="Enter Category Name" name="name">
+                              <input type="name" class="form-control" id="name" value="{{ $category->name }}" placeholder="Enter Category Name" name="name">
                             </div>
                             <div class="mb-3 mt-3">
                               <label for="slug" class="">Slug:</label>
-                              <input type="slug" class="form-control" id="slug" placeholder="Enter Category slug" name="slug">
+                              <input type="slug" class="form-control" id="slug" value="{{ $category->slug }}" placeholder="Enter Category slug" name="slug">
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary btn-sub">Submit</button>
