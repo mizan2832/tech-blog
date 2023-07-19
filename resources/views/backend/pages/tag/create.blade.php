@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('title','tag')
+@section('title','Tag')
 @push('css')
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -48,10 +48,10 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                                 <td>{{ $i++ }}</td>
                                 <td>{{ $tag->name }}</td>
                                 <td>{{ $tag->slug }}</td>
-                                <td> </td>
-                                <td> <a href="{{ route('admin.tag.edit',$tag->id)}}"><i class="fa-solid fa-pen-to-square"></i></a> /
+                                <td>
+                                     <a href="{{ route('admin.tag.edit',$tag->id)}}"><i class="fa-solid fa-pen-to-square"></i></a> /
 
-                                    <form id="delete-form-{{ $tag->id }}" method="post" action="{{ route('admin.tag.destroy',$tag->id)}}" style="display: none">
+                                    <form id="delete-form-{{ $tag->id }}" method="POST" action="{{ route('admin.tag.destroy',$tag->id)}}" style="display: none">
                                         @csrf
                                         @method('DELETE')
                                     </form>
@@ -63,7 +63,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                                         }
                                         else{
                                         event.preventDefault();
-                                        }" ><i class="fa-solid fa-trash-can "></i></a></td>
+                                        }" ><i class="fa-solid fa-trash-can "></i>
+
+                                    </a>
+
+                                    </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -72,16 +76,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             </div>
             <div class="col-sm-4">
                 <div class="card p-3">
-                    <h2 class="text-center">Add tag</h2>
-                    <form action="{{ route('admin.tag.create') }}" method="POST">
+                    <h2 class="text-center">Update tag <span class="align-right"><a href="{{ route('admin.tag.index') }}" class="btn btn-primary">ADD</a></span></h2>
+                    <form action="{{ route('admin.tag.update',$tag->id)}} }}" method="POST">
                         {{ csrf_field() }}
+                        @method('PUT')
                             <div class="mb-3 mt-3">
-                              <label for="tag" class="">Tag:</label>
-                              <input type="name" class="form-control" id="name" placeholder="Enter tag Name" name="name">
+                              <label for="Cateogry" class="">Tag:</label>
+                              <input type="name" class="form-control" id="name" value="{{ $tag->name }}" placeholder="Enter tag Name" name="name">
                             </div>
                             <div class="mb-3 mt-3">
                               <label for="slug" class="">Slug:</label>
-                              <input type="slug" class="form-control" id="slug" placeholder="Enter tag slug" name="slug">
+                              <input type="slug" class="form-control" id="slug" value="{{ $tag->slug }}" placeholder="Enter tag slug" name="slug">
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button type="submit" class="btn btn-primary btn-sub">Submit</button>

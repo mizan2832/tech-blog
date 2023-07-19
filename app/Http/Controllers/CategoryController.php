@@ -31,7 +31,7 @@ class CategoryController extends Controller
     {
          $category = Category::find($id);
          $categories = Category::all();
-        return view('backend.pages.category.create')->withCategory($category)->withCategories($categories);
+         return view('backend.pages.category.create')->withCategory($category)->withCategories($categories);
 
     }
 

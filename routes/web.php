@@ -29,12 +29,19 @@ Route::get('/admin',function(){
 })->middleware(['auth','role:admin'])->name('admin.index');
 
 Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group(function() {
+
     Route::get('category', [CategoryController::class,'index'])->name('category.index');
-    Route::get('tag', [TagController::class,'index'])->name('tag.index');
     Route::post('category/create', [CategoryController::class,'create'])->name('category.create');
     Route::get('category/edit/{id}', [CategoryController::class,'edit'])->name('category.edit');
     Route::put('category/update/{id}', [CategoryController::class,'update'])->name('category.update');
     Route::delete('category/delete/{id}', [CategoryController::class,'destroy'])->name('category.destroy');
+
+    Route::get('tag', [TagController::class,'index'])->name('tag.index');
+    Route::post('tag/create', [TagController::class,'create'])->name('tag.create');
+    Route::get('tag/edit/{id}', [TagController::class,'edit'])->name('tag.edit');
+    Route::put('tag/update/{id}', [TagController::class,'update'])->name('tag.update');
+    Route::delete('tag/delete/{id}', [TagController::class,'destroy'])->name('tag.destroy');
+
 });
 
 
