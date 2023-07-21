@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 
 /*
@@ -41,6 +42,9 @@ Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group
     Route::get('tag/edit/{id}', [TagController::class,'edit'])->name('tag.edit');
     Route::put('tag/update/{id}', [TagController::class,'update'])->name('tag.update');
     Route::delete('tag/delete/{id}', [TagController::class,'destroy'])->name('tag.destroy');
+
+    Route::get('post',[PostController::class,'index'])->name('post.index');
+
 
 });
 

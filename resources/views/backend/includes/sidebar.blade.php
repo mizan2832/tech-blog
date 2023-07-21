@@ -22,22 +22,20 @@
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('admin.tag.index') }}">
-      <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Tags</span>
-    </a>
+                   <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Tags</span>
+                </a>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="ui-cards.html">
-      <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Slug</span>
-    </a>
+                   <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Slug</span>
+                </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="ui-cards.html">
-      <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Post</span>
-    </a>
-            </li>
-
-
+                <a class="sidebar-link" href="{{ route('admin.post.index') }}">
+                   <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Post</span>
+                </a>
+          </li>
         </ul>
 
     </div>
