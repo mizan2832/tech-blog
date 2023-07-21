@@ -1,3 +1,6 @@
+@push('css')
+
+@endpush
 <nav id="sidebar" class="sidebar js-sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="index.html">
@@ -31,8 +34,8 @@
                    <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Slug</span>
                 </a>
             </li>
-            <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ route('admin.post.index') }}">
+            <li class="sub-menu active">
+                <a class="sidebar-link " href="{{ route('admin.post.index') }}">
                    <i class="align-middle" data-feather="grid"></i> <span class="align-middle">Post</span>
                 </a>
           </li>
