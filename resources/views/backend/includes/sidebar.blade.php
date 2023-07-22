@@ -19,12 +19,12 @@
             </li>
             <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ route('admin.tag.index') }}">
-                   <i class="align-middle" data-feather="check-square"></i> <span class="align-middle">Tags</span>
+                    <i class="fa-solid fa-tag fa-lg  align-middle"></i><span class="align-middle">Tags</span>
                 </a>
             </li>
             <li class="menu">
                 <a class="sidebar-link dropdown-btn">
-                    <i class="fa-solid fa-indent fa-lg allign-middle"></i> <span class="align-middle">Post <i class="fa-solid fa-chevron-down"></i></span>
+                    <i class="fa-solid fa-newspaper fa-lg allign-middle"></i> <span class="align-middle">Post <i class="fa-solid fa-chevron-down"></i></span>
                 </a>
 
                 <div class="dropdown-container">
