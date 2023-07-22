@@ -1,0 +1,51 @@
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+    dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  background-color: #818181;
+  border: none;
+  background: none;
+  display: block;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+
+}
+.dropdown-container{
+    margin-left: 50px;
+}
+.dropdown-container a {
+    display: flex;
+    justify-content: column;
+    color: #f1f1f1;
+    text-decoration: none;
+    padding: 3px 3px 3px 10px;
+    border-radius: 20px;
+    width:100px;
+}
+.dropdown-container a:hover {
+    background-color: #3f1e1e
+}
+
+.dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+}
+.dropdown-container a>i {
+    padding-right: 10px;
+    padding-top:3px;
+}
+
+
+
+</style>

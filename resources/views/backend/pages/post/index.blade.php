@@ -1,12 +1,10 @@
 @extends('backend.master')
 @section('title','Post List')
 @push('css')
-   <style>
-     li.menu{
-        background-color: grey !important;
-     }
-   </style>
+    @include('backend.includes.style')
 @endpush
 @section('content')
 
 @endsection
+
+

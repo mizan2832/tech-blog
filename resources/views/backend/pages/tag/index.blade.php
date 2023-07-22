@@ -1,13 +1,9 @@
 @extends('backend.master')
 @section('title','tag')
 @push('css')
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
-
-</style>
-
+    @include('backend.includes.style')
 @endpush
+
 @section('content')
 <div class="container mt-3">
         @if (count($errors) > 0)
@@ -88,6 +84,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                             </div>
                           </form>
                 </div>
+
 
             </div>
 
