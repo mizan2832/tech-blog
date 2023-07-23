@@ -7,7 +7,6 @@
 <div class="container mt-3">
     <div class=" d-flex justify-content-between">
         <div>
-
         </div>
         <div>
             <a href="" class="btn btn-primary">CREATE NEW POST</a>

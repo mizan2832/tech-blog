@@ -6,7 +6,7 @@ import "./modules/sidebar";
 import "./modules/theme";
 import "./modules/feather";
 
-// Charts
+// // Charts
 import "./modules/chartjs";
 
 // Forms
