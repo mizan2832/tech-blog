@@ -7,7 +7,7 @@
 <div class="container mt-3">
     <div class=" d-flex justify-content-between">
         <div>
-            <h1>Post List</h1>
+            <h2>Post List</h2>
         </div>
         <div>
             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
