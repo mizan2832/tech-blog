@@ -8,15 +8,11 @@
 
 <body>
 	<div class="wrapper">
-
-
 		@include('backend.includes.sidebar')
-
         <div class="main">
             @include('backend.includes.master_nav')
             @yield('content')
         </div>
-
 	</div>
 
        @include('backend.includes.footer')

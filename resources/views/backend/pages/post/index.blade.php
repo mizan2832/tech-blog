@@ -20,13 +20,55 @@
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                      <h4 class="modal-title">Modal Heading</h4>
+                      <h4 class="modal-title text-center">Add Post</h4>
                       <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
 
                     <!-- Modal body -->
                     <div class="modal-body">
-                      Modal body..
+                        <form action="/action_page.php">
+                            <div class="form-group">
+                              <label for="title">Title:</label>
+                              <input type="text" class="form-control" id="title">
+                            </div>
+                            <div class="form-group">
+                              <label for="sub-title">Sub Title:</label>
+                              <input type="text" class="form-control" id="sub_title">
+                            </div>
+                            <div class="form-group">
+                              <label for="sub-title">Meta Description:</label>
+                              <input type="textarea" class="form-control" id="meta_description">
+                            </div>
+                            <div class="form-group">
+                              <label for="sub-title">Meta Keywords:</label>
+                              <input type="text" class="form-control" id="meta_keywords">
+                            </div>
+                            <div class="form-group">
+                              <label for="slug">Slug:</label>
+                              <input type="text" class="form-control" id="slug">
+                            </div>
+                            <div class="form-group">
+                              <label for="category">Category:</label>
+                              <select name="category" class="form-control"  id="category">
+                                <option value="" disabled>Select Category</option>
+                                <option value="1">Computer</option>
+                                <option value="1">Laptop</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="tag">Tag:</label>
+                              <select name="category" class="form-control" id="category">
+                                <option value="" disabled>Select Tag</option>
+                                <option value="1">Computer</option>
+                                <option value="1">Laptop</option>
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="description">Description:</label>
+                              <textarea class="ckeditor form-control" name="wysiwyg-editor"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                          </form>
                     </div>
 
                     <!-- Modal footer -->
@@ -72,5 +114,13 @@
     </table>
   </div>
 @endsection
+@push('js')
+ <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>
+@endpush
 
 
