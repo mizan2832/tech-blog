@@ -1,5 +1,8 @@
 @extends('backend.master')
 @section('title','ADMIN TEMPLATE')
+@push('css')
+    @include('backend.includes.style')
+@endpush
 @section('content')
 
     <main class="content">

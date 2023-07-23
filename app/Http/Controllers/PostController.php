@@ -9,4 +9,8 @@ class PostController extends Controller
     public function index() {
         return view('backend.pages.post.index');
     }
+
+    public function create() {
+        return view('backend.pages.post.create');
+    }
 }

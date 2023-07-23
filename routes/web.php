@@ -44,6 +44,7 @@ Route::middleware(['auth','role:admin'])->name('admin.')->prefix('admin')->group
     Route::delete('tag/delete/{id}', [TagController::class,'destroy'])->name('tag.destroy');
 
     Route::get('post',[PostController::class,'index'])->name('post.index');
+    Route::get('post/create',[PostController::class,'create'])->name('post.create');
 
 
 });
