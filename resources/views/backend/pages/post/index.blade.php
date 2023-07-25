@@ -110,17 +110,20 @@
           <td><i class="fa-solid fa-pen-to-square fa-lg"></i> <i class="fa-solid fa-eye fa-lg"></i> <i class="fa-solid fa-trash fa-lg"></i></td>
         </tr>
 
+        
       </tbody>
     </table>
   </div>
 @endsection
 @push('js')
- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
- <script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor();
-    });
-</script>
+<script src="{{ asset('backend/ckeditor/ckeditor.js') }}"></script>
+<script>
+  ClassicEditor
+      .create( document.querySelector( '.ckeditor' ) )
+      .catch( error => {
+          console.error( error );
+      } );
+  </script>
 @endpush
 
 
