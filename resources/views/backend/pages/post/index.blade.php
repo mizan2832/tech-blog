@@ -85,8 +85,7 @@
         </div>
     </div>
 
-
-
+    
     <table class="table table-hover">
       <thead>
         <tr>
@@ -110,7 +109,7 @@
           <td><i class="fa-solid fa-pen-to-square fa-lg"></i> <i class="fa-solid fa-eye fa-lg"></i> <i class="fa-solid fa-trash fa-lg"></i></td>
         </tr>
 
-        
+
       </tbody>
     </table>
   </div>
