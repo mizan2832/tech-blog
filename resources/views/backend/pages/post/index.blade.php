@@ -15,7 +15,7 @@
               </button>
 
               <div class="modal" id="myModal">
-                <div class="modal-dialog modal-lg">
+                <div class="modal-dialog modal-xl">
                   <div class="modal-content">
 
                     <!-- Modal Header -->
@@ -106,7 +106,11 @@
           <td>john@example.com</td>
           <td>john@example.com</td>
           <td>john@example.com</td>
-          <td><i class="fa-solid fa-pen-to-square fa-lg"></i> <i class="fa-solid fa-eye fa-lg"></i> <i class="fa-solid fa-trash fa-lg"></i></td>
+          <td>
+              <i class="fa-solid fa-pen-to-square fa-lg"></i>
+              <i class="fa-solid fa-eye fa-lg"></i>
+              <i class="fa-solid fa-trash fa-lg"></i>
+          </td>
         </tr>
 
 

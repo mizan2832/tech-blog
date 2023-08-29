@@ -29,6 +29,7 @@
             dropdownContent.style.display = "none";
             } else {
             dropdownContent.style.display = "block";
+
             }
         });
         }
