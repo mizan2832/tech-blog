@@ -2,14 +2,16 @@
 
 namespace App\Models\admin;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Image;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Post extends Model
 {
     use HasFactory;
 
     protected $fillable = ['title','sub_title','description','meta_des','meta_keywords','slug','images'];
+
 
     /**
      * The tags that belong to the Post
@@ -24,6 +26,11 @@ class Post extends Model
     public function category()
     {
       return $this->belongsTo(Category::class);
+    }
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
     }
 
 

@@ -41,7 +41,7 @@ return [
             'driver' => 'array',
             'serialize' => false,
         ],
-
+        
         'database' => [
             'driver' => 'database',
             'table' => 'cache',
